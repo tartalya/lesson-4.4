@@ -3,7 +3,6 @@
 require_once 'config.php';
 
 if (empty($_GET['tbl'])) {
-
     echo 'Пустое название таблицы';
     die;
 }
@@ -17,4 +16,3 @@ $tableContent = $link->query($query, PDO::FETCH_ASSOC);
 $result = $tableContent->fetchAll();
 
 include 'viewtemplate.php';
-

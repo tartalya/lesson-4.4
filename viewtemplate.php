@@ -37,24 +37,24 @@
 
         <tr>
 
-            <?php foreach ($result as $value): ?> 
+            <?php foreach ($result as $value) : ?> 
 
             <form method="POST" name="<?= $value['Field'] ?>" action="update.php">
 
                 <tr>
 
-                    <?php foreach ($value as $key => $val): ?>
+                    <?php foreach ($value as $key => $val) : ?>
 
                         <td> 
-                            <?php if ($key == 'Field'): ?>
+                            <?php if ($key == 'Field') : ?>
                                 <input type="text" name="name" id="name" value="<?= $val ?>"></input>
                                 <input type="hidden" name="old_name" value="<?= $val ?>"></input>
 
-                            <?php elseif ($key == 'Type'): ?>
+                            <?php elseif ($key == 'Type') : ?>
 
                                 <select name="type" id="type"><?= $val ?>
 
-                                    <?php foreach ($defTypes as $defs): ?>
+                                    <?php foreach ($defTypes as $defs) : ?>
 
                                         <?php
                                         $goodVal = explode('(', $val);
@@ -68,7 +68,6 @@
                                         if ($defs == $goodVal) {
                                             echo "<option selected value=$defs>$defs</option>";
                                         } else {
-
                                             echo "<option value=$defs>$defs</option>";
                                         }
                                         ?>
@@ -76,7 +75,7 @@
                                     <?php endforeach; ?>
                                 </select>
 
-                            <?php else: ?>
+                            <?php else : ?>
 
                                 <?= $val ?>
                             <?php endif ?>
@@ -93,7 +92,7 @@
             </form>
 
         </tr>
-    <?php endforeach; ?>
+            <?php endforeach; ?>
 </tr>
 
 

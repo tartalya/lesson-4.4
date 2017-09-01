@@ -32,5 +32,3 @@ $link = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPa
 
 
 $defTypes = array('INT', 'VARCHAR', 'TEXT', 'DATE', 'FLOAT', 'DOUBLE', 'BOOLEAN');
-
-
